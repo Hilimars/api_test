@@ -16,7 +16,7 @@ def env_config(request):
     """
     project_name = 'api_auto_test'
     rootPath = get_root_path(project_name)
-    config_path = os.path.abspath(rootPath + 'config\\env_config.yml')  # 获取tran.csv文件的路径
+    config_path = os.path.abspath(os.getcwd() + '\\config\\env_config.yml')  # 获取tran.csv文件的路径
     with open(config_path) as f:
         env_config = yaml.load(f) #读取配置文件
     return env_config
